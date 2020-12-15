@@ -32,6 +32,8 @@ def eval_expr(s, d = {}):
 
     return temp[0]
 
+##### TO_INFIX #####
+
 def to_infix(s):
 
     temp = []
@@ -59,3 +61,36 @@ def to_infix(s):
                 temp.append('( ' + prve + ' / ' + druhe + ' )')
 
     return temp[0]
+
+##### BONUS #####
+
+def to_postfix(s): # nefunguje to uplne spravne
+
+    zatvorky = ['(', ')']
+    temp = []
+
+    s = s.split()
+
+    for item in s:
+        if (item not in zatvorky):
+            temp.append(item)
+
+    cisla = []
+    znamienka = []
+
+    for item in temp:
+        if (item.isnumeric()):
+            cisla.append(item)
+
+        else:
+            znamienka.append(item)
+
+    while (len(cisla) != 1):
+        druhe = cisla.pop()
+        prve = cisla.pop()
+        znamienko = znamienka.pop()
+
+        cisla.append(prve + ' ' + druhe + ' ' + znamienko)
+
+
+    return cisla[0]
