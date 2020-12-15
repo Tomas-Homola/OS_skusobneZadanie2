@@ -19,10 +19,13 @@ def eval_expr(s, d = {}):
             # potom podla toho, ze ake je znamienko, sa vyhodnoti vysledok
             if (item == "+"):
                 temp.append(prve + druhe)
+            
             elif (item == "-"):
                 temp.append(prve - druhe)
+            
             elif (item == "*"):
                 temp.append(prve * druhe)
+            
             elif (item == "/"):
                 temp.append(prve // druhe)
 
@@ -56,9 +59,3 @@ def to_infix(s):
                 temp.append('( ' + prve + ' / ' + druhe + ' )')
 
     return temp[0]
-
-
-
-
-
-
