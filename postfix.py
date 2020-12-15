@@ -47,13 +47,13 @@ def to_infix(s):
                 temp.append('( ' + prve + ' + ' + druhe + ' )')
             
             elif (item == "-"):
-                temp.append('( ' + prve + ' + ' + druhe + ' )')
+                temp.append('( ' + prve + ' - ' + druhe + ' )')
 
             elif (item == "*"):
-                temp.append('( ' + prve + ' + ' + druhe + ' )')
+                temp.append('( ' + prve + ' * ' + druhe + ' )')
 
             elif (item == "/"):
-                temp.append('( ' + prve + ' + ' + druhe + ' )')
+                temp.append('( ' + prve + ' / ' + druhe + ' )')
 
     return temp[0]
 
